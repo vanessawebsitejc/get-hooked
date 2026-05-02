@@ -1,0 +1,46 @@
+/* ── BASE: variables, reset, global typography ── */
+
+:root {
+  --green: #8fbc8f;
+  --pink: #e8a0b0;
+  --blue: #89aed4;
+  --cream: #fdf8f4;
+  --warm: #f5ede4;
+  --text: #3d3535;
+  --soft: #7a6e6e;
+  --card-bg: #ffffff;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  font-family: 'Nunito', sans-serif;
+  background: var(--cream);
+  color: var(--text);
+  overflow-x: hidden;
+}
+
+section {
+  padding: 60px 5vw;
+}
+
+.section-label {
+  font-size: clamp(1.25rem, 4vw, 2rem);
+  letter-spacing: 0.22em;
+  text-transform: uppercase;
+  color: var(--pink);
+  font-weight: 700;
+  margin-bottom: 10px;
+}
+
+.section-title {
+  font-family: 'Playfair Display', serif;
+  font-size: clamp(2rem, 4vw, 3rem);
+  color: var(--text);
+  margin-bottom: 32px;
+  line-height: 1.15;
+}
