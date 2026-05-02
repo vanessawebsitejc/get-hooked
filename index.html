@@ -384,6 +384,28 @@
     nextBtn.addEventListener('click', () => { if (currentOffset < maxOffset()) { currentOffset++; updateTrack(); } });
     window.addEventListener('resize', () => { currentOffset = Math.min(currentOffset, maxOffset()); updateTrack(); });
 
+    // ── SWIPE SUPPORT ──
+    let touchStartX = 0;
+    let touchEndX = 0;
+ 
+    track.addEventListener('touchstart', (e) => {
+      touchStartX = e.changedTouches[0].screenX;
+    }, { passive: true });
+ 
+    track.addEventListener('touchend', (e) => {
+      touchEndX = e.changedTouches[0].screenX;
+      const diff = touchStartX - touchEndX;
+      if (Math.abs(diff) > 40) { // min swipe distance in px
+        if (diff > 0 && currentOffset < maxOffset()) {
+          currentOffset++;
+          updateTrack();
+        } else if (diff < 0 && currentOffset > 0) {
+          currentOffset--;
+          updateTrack();
+        }
+      }
+    }, { passive: true });
+    
     // ── PER-ANIMAL IMAGE DOTS ──
     document.querySelectorAll('.animal-img-area').forEach(area => {
       const imgs = area.querySelectorAll('img');
