@@ -31,7 +31,7 @@
         <p class="section-label">About Me</p>
         <h2 class="section-title">Hi, I'm Vanessa!</h2>
         <p class="about-subtitle">
-          Hey! I'm the maker behind Get Hooked Crochet Creations. I'm completely self-taught and picked up crocheting as a hobby while going through school and quickly got hooked! What started as making stuffies for friends and family turned into something I knew I had to share. I love making stuffies because they're so fun to create, and nothing beats seeing someone's face light up when they get one.
+          Hey! I'm the creator of Get Hooked Crochet Creations. I'm completely self-taught and picked up crocheting as a hobby while going through school and quickly got hooked! What started as making stuffies for friends and family turned into something I knew I had to share. I love making stuffies because they're so fun to create, and nothing beats seeing someone's face light up when they get one.
         </p>
         <p class="about-subtitle">
           Everything I make is fully customizable. Whether it's the yarn colour, yarn type, or little accessories. I'm still learning and always eager to try new things, so if you have something in mind, I'm more than willing to give it a go to make your creations exactly what you imagined.
@@ -62,13 +62,19 @@
             <img src="images/velvetBunnies/Front.jpeg" alt="Velvet bunny front" class="active" />
             <img src="images/velvetBunnies/Side.jpeg" alt="Velvet bunny side" />
             <img src="images/velvetBunnies/Closeup.jpeg" alt="Velvet bunny closeup" />
+            <img src="images/velvetBunnies/Lined.jpeg"/>
+            <img src="images/velvetBunnies/Ear.jpeg"/>
+
             <div class="animal-dots">
               <div class="animal-dot active" data-idx="0"></div>
               <div class="animal-dot" data-idx="1"></div>
               <div class="animal-dot" data-idx="2"></div>
+              <div class="animal-dot" data-idx="3"></div>
+              <div class="animal-dot" data-idx="4"></div>
             </div>
           </div>
           <div class="animal-name">🐰 Velvet Bunnies</div>
+          <div class="animal-desc">Medium Velvet Yarn, Non-weighted</div>
         </div>
         
         <!-- BUNNY -->
@@ -80,6 +86,8 @@
             <img src="images/Bunny/Flowers.jpeg" />
             <img src="images/Bunny/Bow.jpeg" />
             <img src="images/Bunny/Closeup.jpeg" />
+            <img src="images/Bunny/2Front.jpeg" />
+            <img src="images/Bunny/2Back.jpeg" />
         
             <div class="animal-dots">
               <div class="animal-dot active" data-idx="0"></div>
@@ -88,10 +96,13 @@
               <div class="animal-dot" data-idx="3"></div>
               <div class="animal-dot" data-idx="4"></div>
               <div class="animal-dot" data-idx="5"></div>
+              <div class="animal-dot" data-idx="6"></div>
+              <div class="animal-dot" data-idx="7"></div>
             </div>
           </div>
         
           <div class="animal-name">🐇 Bunny</div>
+          <div class="animal-desc">Medium Basic Yarn, Weighted</div>
         </div>
 
         <!-- FLOWERS -->
@@ -142,6 +153,7 @@
           </div>
 
           <div class="animal-name">🧸 Fluffy Bear</div>
+          <div class="animal-desc">Medium Fluffy Yarn, Weighted</div>
         </div>
 
         <!-- HIPPO -->
@@ -161,6 +173,7 @@
           </div>
 
           <div class="animal-name">🦛 Hippo</div>
+          <div class="animal-desc">Medium Basic Yarn, Weighted</div>
         </div>
 
         <!-- HORSE -->
@@ -174,6 +187,7 @@
             </div>
           </div>
           <div class="animal-name">🐴 Horse</div>
+          <div class="animal-desc">Medium Basic Yarn, weighted</div>
         </div>
 
         <!-- BEAR -->
@@ -189,6 +203,7 @@
             </div>
           </div>
           <div class="animal-name">🐻 Bear</div>
+          <div class="animal-desc">Medium Basic Yarn, weighted</div>
         </div>
 
         <!-- REINDEER -->
@@ -207,6 +222,7 @@
             </div>
           </div>
           <div class="animal-name">🦌 Reindeer</div>
+          <div class="animal-desc">Medium Basic Yarn, weighted</div>
         </div>
 
         <!-- SNOWMAN -->
@@ -224,6 +240,7 @@
             </div>
           </div>
           <div class="animal-name">⛄ Snowman</div>
+          <div class="animal-desc">Medium Basic Yarn, weighted</div>
         </div>
 
         
@@ -249,16 +266,19 @@
       <div class="price-card green">
         <div class="price-emoji">🧶</div>
         <div class="price-label">Medium Velvet Yarn</div>
+        <div class="price-label2">Example: Velvet Bunny </div>
         <div class="price-amount">$30<span> /stuffy</span></div>
       </div>
       <div class="price-card pink">
         <div class="price-emoji">🪡</div>
         <div class="price-label">Medium Basic Yarn</div>
+        <div class="price-label2">Example: Hippo </div>
         <div class="price-amount">$50<span> /stuffy</span></div>
       </div>
       <div class="price-card blue">
         <div class="price-emoji">☁️</div>
         <div class="price-label">Medium Fluffy Yarn</div>
+        <div class="price-label2">Example: Fluffy Bear </div>
         <div class="price-amount">$90<span> /stuffy</span></div>
       </div>
     </div>
@@ -268,6 +288,8 @@
       <div class="addon-pill">✏️ Custom Lettering <span class="addon-price">+$2</span></div>
       <div class="addon-pill">🧶 Crocheted Bow <span class="addon-price">+$2</span></div>
       <div class="addon-pill">🎀 Ribbon Bow x2 <span class="addon-price">+$2</span></div>
+      <div class="addon-pill">🪡 Fabric Linning (ears, feet, bows) <span class="addon-price">+$5</span></div>
+    </div>
     </div>
   </section>
 
@@ -358,8 +380,6 @@
     </p>
   </footer>
 
-
-
   <script>
     // ── ANIMAL CAROUSEL (left/right arrows) ──
     const track = document.getElementById('animalTrack');
@@ -405,7 +425,8 @@
         }
       }
     }, { passive: true });
-    
+
+
     // ── PER-ANIMAL IMAGE DOTS ──
     document.querySelectorAll('.animal-img-area').forEach(area => {
       const imgs = area.querySelectorAll('img');
