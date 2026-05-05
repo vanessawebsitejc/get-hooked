@@ -68,6 +68,13 @@
   margin-bottom: 10px;
 }
 
+.price-label2 {
+  font-weight: 600;
+  font-size: 0.8rem;
+  color: var(--text);
+  margin-bottom: 10px;
+}
+
 .price-amount {
   font-family: 'Playfair Display', serif;
   font-size: 2.2rem;
